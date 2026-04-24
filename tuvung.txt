@@ -1,0 +1,15 @@
+Table,Cái bàn
+Chair,Cái ghế
+Pen,Cây bút
+Book,Quyển sách
+School,Trường học
+Teacher,Giáo viên
+Student,Sinh viên
+Computer,Máy tính
+Phone,Điện thoại
+Water,Nước
+Apple,Quả táo
+Cat,Con mèo
+Dog,Con chó
+House,Ngôi nhà
+Car,Ô tô
