@@ -3,7 +3,7 @@ import Data_loader
 import quiz_engine
 import logger
 
-en, vi = data_loader.lay_du_lieu()
+en, vi = Data_loader.lay_du_lieu()
 
 print("--- CHUONG TRINH TRAC NGHIEM ---")
 chon = input("Chon che do (1: Viet-Anh, 2: Anh-Viet): ")
