@@ -1,0 +1,15 @@
+Ket qua: 9/10. Sai 1 cau.
+Chi tiet cau sai:
+- Table - Cái bàn
+--------------------
+Ket qua: 2/10. Sai 8 cau.
+Chi tiet cau sai:
+- Book - Quyển sách
+- Computer - Máy tính
+- Apple - Quả táo
+- Dog - Con chó
+- House - Ngôi nhà
+- Pen - Cây bút
+- Cat - Con mèo
+- Student - Sinh viên
+--------------------

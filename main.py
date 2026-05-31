@@ -8,7 +8,11 @@ list_tienganh, list_tiengviet = Data_loader.lay_du_lieu()
 print("--- CHUONG TRINH TRAC NGHIEM ---")
 print("1: Viet-Anh")
 print("2: Anh-Viet")
-chon = input("Chọn chế độ (1 hoặc 2): ")
+while True:
+    chon = input("Chọn chế độ (1 hoặc 2): ").strip()
+    if chon in ['1', '2']:
+        break
+    print("Lỗi: Chế độ chọn không hợp lệ! Vui lòng chỉ nhập 1 hoặc 2.")
 
 diem = 0
 danh_sach_cau_sai = []
@@ -26,26 +30,31 @@ for i in range(10):
 
     print("\n--- Câu số", i + 1, "---")
 
+    nhan_dap_an = ['A', 'B', 'C']
     if chon == '1':
         print("Từ '" + list_tiengviet[vi_tri_dung] + "' có nghĩa Tiếng Anh là gì?")
 
         for n in range(len(ba_dap_an)):
             chi_so_dap_an = ba_dap_an[n]
-            print(str(n + 1) + ". " + list_tienganh[chi_so_dap_an])
+            print(nhan_dap_an[n] + ". " + list_tienganh[chi_so_dap_an])
     else:
-        print("Tưd '" + list_tienganh[vi_tri_dung] + "' có nghĩa Tiếng Việt là gì?")
+        print("Từ '" + list_tienganh[vi_tri_dung] + "' có nghĩa Tiếng Việt là gì?")
         for n in range(len(ba_dap_an)):
             chi_so_dap_an = ba_dap_an[n]
-            print(str(n + 1) + ". " + list_tiengviet[chi_so_dap_an])
+            print(nhan_dap_an[n] + ". " + list_tiengviet[chi_so_dap_an])
 
-    cau_tra_loi = input("Nhập lựa chọn của bạn (1, 2, 3): ")
+    while True:
+        cau_tra_loi = input("Nhập lựa chọn của bạn (a, b, c): ").strip().upper()
+        if cau_tra_loi in ['A', 'B', 'C']:
+            break
+        print("Lỗi: Lựa chọn không hợp lệ! Vui lòng chỉ nhập a, b hoặc c.")
 
-    dap_an_dung_nam_o_so = 0
+    dap_an_dung = ""
     for n in range(len(ba_dap_an)):
         if ba_dap_an[n] == vi_tri_dung:
-            dap_an_dung_nam_o_so = n + 1
+            dap_an_dung = nhan_dap_an[n]
 
-    if cau_tra_loi == str(dap_an_dung_nam_o_so):
+    if cau_tra_loi == dap_an_dung:
         print("=> Chính xác!")
         diem = diem + 1 
     else:
